@@ -1,7 +1,7 @@
 import time
 import random
 
-startup2 = r"""
+startup = r"""
  _____ _        _____            _____          
 |_   _(_) ___  |_   _|_ _  ___  |_   _|__   ___ 
   | | | |/ __|   | |/ _` |/ __|   | |/ _ \ / _ \
@@ -17,7 +17,6 @@ table += " 7 | 8 | 9\n"
 
 print(startup)
 time.sleep(1)
-print(startup2)
 
 print("Do you really want to play the game (Options: yes, y, no, n)")
 yes_no = input(">> ").strip().lower()
