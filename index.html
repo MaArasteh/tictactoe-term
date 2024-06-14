@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+    <script>
+        $('body').terminal({
+            hello: function(what) {
+                this.echo('Hello, ' + what +
+                          '. Wellcome to this terminal.');
+            
+            },
+
+            source: function() {
+                this.echo("Open GitHub Repo in your browser. https://github.com/MaArasteh/tictactoe-term")
+            },
+
+            help: function() {
+                this.echo("User Manual\n" + "download {pyfile, winexe}: downloads the app for you")
+            },
+
+            download: function(file_type) {
+                this.echo("Open this link in your browser or download manager:")
+                if (file_type == "pyfile") {
+                    this.echo("Open this (Then right-click and select Save as...): https://raw.githubusercontent.com/MaArasteh/tictactoe-term/main/main.py")
+                } else if (file_type == "winexe") {
+                    this.echo("Windows EXE File coming soon")
+                }
+            }
+        }, {
+            greetings: 'TicTacToe in Terminal'
+        });
+
+        github('jcubic/jquery.terminal');
+        </script>
+</body>
+</html
